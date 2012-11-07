@@ -3,7 +3,7 @@ class Examplemarkdown extends CI_Controller{
 public function index()
 {
 $this->load->library('cimarkdown');
-$markdowndemo =  <<< EOD
+$markdowndemo =  <<< 'EOT'
 Markdown: Basics
 ================
 
@@ -311,7 +311,7 @@ Output:
         &lt;p&gt;For example.&lt;/p&gt;
     &lt;/blockquote&gt;
     </code></pre>
-EOD;
+EOT;
 echo $this->cimarkdown->markit($markdowndemo);
 }
 }
